@@ -16,7 +16,20 @@ export const skillsSection = {
 export const skillGroups: SkillGroup[] = [
   { name: "Languages", items: ["JavaScript", "TypeScript", "Python", "SQL"] },
   { name: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "HTML", "CSS"] },
-  { name: "Backend", items: ["Node.js", "Express", "FastAPI", "Django", "REST APIs", "WebSockets"] },
+  {
+    name: "Backend",
+    items: [
+      "Node.js",
+      "Fastify",
+      "Express",
+      "FastAPI",
+      "Django",
+      "REST APIs",
+      "WebSockets",
+      "BullMQ",
+      "Transactional outbox pattern",
+    ],
+  },
   { name: "Data", items: ["PostgreSQL", "Redis", "MongoDB", "Prisma", "SQLAlchemy"] },
   { name: "Web3", items: ["viem", "ethers.js", "Wallet integrations", "Reading on-chain data"] },
   { name: "Security", items: ["OWASP Top 10", "Burp Suite", "Wireshark", "Nmap", "Secure authentication (OAuth, JWT)"] },
