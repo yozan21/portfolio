@@ -1,4 +1,4 @@
-/** Projects section copy and the project list. Projects are placeholders until replaced with real work. */
+/** Projects section copy and the project list. */
 
 /** One portfolio project. */
 export type Project = {
@@ -29,44 +29,56 @@ export const projectsSection = {
 
 export const projects: Project[] = [
   {
-    title: "Opening Drill",
+    title: "Gambit",
     summary:
-      "A chess openings trainer that schedules lines with spaced repetition, so players review the moves they keep getting wrong.",
+      "A real-time chess game with three ways to play: against a random opponent, a friend or a bot. Games against random opponents are rated with Elo.",
     role: "Solo, full-stack",
     decisions: [
-      "Ran Stockfish as WebAssembly in a Web Worker, so analysis costs no server time and keeps the board responsive.",
-      "Stored repertoires as PGN text in Postgres instead of a move-tree schema, which keeps imports and exports lossless.",
-      "Used server actions for writes and kept the board as the only client component.",
+      "Validated each move on the client so the board updates instantly, and again on the server, which saves a move only after confirming it is legal.",
+      "Applied Elo rating changes only in random-opponent games, so games against friends or the bot can't be used to farm rating.",
+      "Powered the bot with the Stockfish engine, raising its strength with every level.",
+      "Gave each bot level five free hints, with more earned by watching an ad.",
     ],
-    stack: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Stockfish WASM", "Tailwind CSS"],
-    liveUrl: "https://example.com/opening-drill",
-    repoUrl: "https://github.com/your-username/opening-drill",
+    stack: ["React", "Redux Toolkit", "RTK Query", "Fastify", "Socket.IO", "MongoDB", "Stockfish", "Google OAuth"],
+    liveUrl: "https://gambit-ruddy.vercel.app/",
+    repoUrl: "https://github.com/yozan21/gambit",
   },
   {
-    title: "Ledgerline",
+    title: "Ghar Sajilo",
     summary:
-      "A read-only crypto portfolio tracker. Paste wallet addresses and see balances, cost basis and realised gains across chains.",
+      "A room rental platform. Renters find rooms by location and popularity or explore listings on a map; landlords manage their listings and see how popular each one is.",
     role: "Solo, full-stack",
     decisions: [
-      "Never asks for keys or signatures: it reads public chain data only, which removes a whole class of security risk.",
-      "Indexed transfers into Postgres with a background job, so page loads hit the database rather than the RPC provider.",
-      "Kept token amounts as integer strings end to end to avoid floating-point rounding on 18-decimal tokens.",
+      "Built the map explorer with Leaflet and OpenStreetMap, so renters can pan around and see the listings in each area.",
+      "Tracked listing views and offered them as a filter, so renters can find the most popular rooms.",
+      "Gave landlords a view of their listings with popularity numbers for each one.",
     ],
-    stack: ["Next.js", "TypeScript", "viem", "PostgreSQL", "Redis", "Vercel Cron"],
-    liveUrl: "https://example.com/ledgerline",
-    repoUrl: "https://github.com/your-username/ledgerline",
+    stack: ["React", "TanStack Query", "Leaflet", "OpenStreetMap", "Express", "MongoDB", "JWT"],
+    liveUrl: "https://final-year-project-iota-one.vercel.app/",
+    repoUrl: "https://github.com/yozan21/final_year_project",
   },
   {
-    title: "Blitz Rooms",
+    title: "Monster World",
     summary:
-      "Real-time multiplayer chess with clocks, rematches and spectators, built to stay fair on slow connections.",
-    role: "Backend and real-time infrastructure",
+      "A browser game styled after Game Boy Advance RPGs: a pixel-art world to walk around, and battles between your monsters and wild ones.",
+    role: "", // TODO: solo?
     decisions: [
-      "Made the server the only source of truth for moves and clocks; clients send intents and render what comes back.",
-      "Used Redis pub/sub to fan out moves, so any server instance can host either player.",
-      "Compensated clocks for measured latency per move instead of trusting client timestamps.",
+      "Designed the world as layered maps in Tiled and rendered them on an HTML5 canvas.",
+      "Built a battle system between the player's monsters and wild monsters.",
     ],
-    stack: ["Node.js", "TypeScript", "WebSockets", "Redis", "React", "Docker"],
-    repoUrl: "https://github.com/your-username/blitz-rooms",
+    stack: ["JavaScript", "HTML5 Canvas", "Tiled"],
+    liveUrl: "https://yozan-pokemon-game.netlify.app/",
+    repoUrl: "https://github.com/yozan21/pokemon-game",
+  },
+  {
+    title: "The Wild Oasis",
+    summary:
+      "An internal hotel management app for staff: check guests in and out, edit room details, book rooms for walk-in guests, and follow sales and activity on a dashboard.",
+    role: "Solo, practice project",
+    decisions: [
+      "Built a dashboard with charts for sales and recent activity, so staff see how the hotel is doing at a glance.",
+      "Let staff create guest accounts for offline bookings, so walk-in and phone bookings live in the same system as online ones.",
+    ],
+    stack: ["React", "TanStack Query", "Supabase"],
   },
 ];

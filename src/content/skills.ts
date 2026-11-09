@@ -22,7 +22,7 @@ export const skillGroups: SkillGroup[] = [
     name: "Frontend",
     items: [
       "React",
-      "Tanstack Query",
+      "TanStack Query",
       "Next.js",
       "Tailwind CSS",
       "HTML",
@@ -48,12 +48,15 @@ export const skillGroups: SkillGroup[] = [
     items: ["PostgreSQL", "Redis", "MongoDB", "Prisma", "SQLAlchemy"],
   },
   {
-    name: "Web3",
+    name: "AI (learning)",
     items: [
-      "viem",
-      "ethers.js",
-      "Wallet integrations",
-      "Reading on-chain data",
+      "RAG pipelines",
+      "Vector databases",
+      "Embeddings",
+      "LLM APIs",
+      "Tool calling",
+      "Agentic workflows",
+      "Claude Code",
     ],
   },
   {

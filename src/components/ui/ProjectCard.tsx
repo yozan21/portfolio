@@ -11,7 +11,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="grid gap-6 border-t border-border py-10 last:border-b lg:grid-cols-12 lg:gap-10 lg:py-14">
       <header className="lg:col-span-4">
         <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">{project.title}</h3>
-        <p className="mt-2 text-sm text-muted">{project.role}</p>
+        {project.role && <p className="mt-2 text-sm text-muted">{project.role}</p>}
       </header>
 
       <div className="lg:col-span-8">
@@ -24,13 +24,15 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </ul>
 
-        <ul aria-label={projectsSection.stackLabel} className="mt-8 flex flex-wrap gap-2">
-          {project.stack.map((tech) => (
-            <li key={tech} className="rounded-sm border border-border px-2 py-1 text-xs text-muted">
-              {tech}
-            </li>
-          ))}
-        </ul>
+        {project.stack.length > 0 && (
+          <ul aria-label={projectsSection.stackLabel} className="mt-8 flex flex-wrap gap-2">
+            {project.stack.map((tech) => (
+              <li key={tech} className="rounded-sm border border-border px-2 py-1 text-xs text-muted">
+                {tech}
+              </li>
+            ))}
+          </ul>
+        )}
 
         {links.length > 0 && (
           <ul className="mt-8 flex gap-6 text-sm">

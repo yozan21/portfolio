@@ -19,7 +19,7 @@ export const site = {
   /** Full name, shown as the hero heading and the page title. */
   name: "Yojan Kaphle",
   /** One-line summary, shown under the name and used as the meta description. */
-  tagline: "Full-stack developer building crypto products and chess platforms.",
+  tagline: "Full-stack developer building web apps with modern tools, now exploring agentic AI workflows.",
   /** Contact links shown in the hero nav. */
   contacts: [
     { label: "GitHub", href: "https://github.com/yozan21" },
