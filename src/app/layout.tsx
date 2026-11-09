@@ -20,9 +20,23 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
+// Share image and favicon come from opengraph-image.tsx and icon.tsx next to this file.
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: site.name,
   description: site.tagline,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: site.name,
+    title: site.name,
+    description: site.tagline,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.tagline,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

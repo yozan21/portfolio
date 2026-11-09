@@ -9,6 +9,13 @@ export type Link = {
 };
 
 export const site = {
+  /**
+   * Public address, used to build absolute links in share previews.
+   * shortcut: reads Vercel's production URL; on another host, replace the fallback with the real domain.
+   */
+  url: process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000",
   /** Full name, shown as the hero heading and the page title. */
   name: "Yojan Kaphle",
   /** One-line summary, shown under the name and used as the meta description. */

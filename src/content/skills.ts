@@ -19,5 +19,6 @@ export const skillGroups: SkillGroup[] = [
   { name: "Backend", items: ["Node.js", "Express", "FastAPI", "Django", "REST APIs", "WebSockets"] },
   { name: "Data", items: ["PostgreSQL", "Redis", "MongoDB", "Prisma", "SQLAlchemy"] },
   { name: "Web3", items: ["viem", "ethers.js", "Wallet integrations", "Reading on-chain data"] },
+  { name: "Security", items: ["OWASP Top 10", "Burp Suite", "Wireshark", "Nmap", "Secure authentication (OAuth, JWT)"] },
   { name: "Testing and tooling", items: ["Vitest", "pytest", "Git", "Docker", "GitHub Actions", "Vercel", "Linux"] },
 ];
