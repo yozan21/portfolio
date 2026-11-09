@@ -39,7 +39,16 @@ export const projects: Project[] = [
       "Powered the bot with the Stockfish engine, raising its strength with every level.",
       "Gave each bot level five free hints, with more earned by watching an ad.",
     ],
-    stack: ["React", "Redux Toolkit", "RTK Query", "Fastify", "Socket.IO", "MongoDB", "Stockfish", "Google OAuth"],
+    stack: [
+      "React",
+      "Redux Toolkit",
+      "RTK Query",
+      "Fastify",
+      "Socket.IO",
+      "MongoDB",
+      "Stockfish",
+      "Google OAuth",
+    ],
     liveUrl: "https://gambit-ruddy.vercel.app/",
     repoUrl: "https://github.com/yozan21/gambit",
   },
@@ -53,7 +62,15 @@ export const projects: Project[] = [
       "Tracked listing views and offered them as a filter, so renters can find the most popular rooms.",
       "Gave landlords a view of their listings with popularity numbers for each one.",
     ],
-    stack: ["React", "TanStack Query", "Leaflet", "OpenStreetMap", "Express", "MongoDB", "JWT"],
+    stack: [
+      "React",
+      "TanStack Query",
+      "Leaflet",
+      "OpenStreetMap",
+      "Express",
+      "MongoDB",
+      "JWT",
+    ],
     liveUrl: "https://final-year-project-iota-one.vercel.app/",
     repoUrl: "https://github.com/yozan21/final_year_project",
   },
@@ -61,7 +78,7 @@ export const projects: Project[] = [
     title: "Monster World",
     summary:
       "A browser game styled after Game Boy Advance RPGs: a pixel-art world to walk around, and battles between your monsters and wild ones.",
-    role: "", // TODO: solo?
+    role: "Solo",
     decisions: [
       "Designed the world as layered maps in Tiled and rendered them on an HTML5 canvas.",
       "Built a battle system between the player's monsters and wild monsters.",
