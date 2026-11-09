@@ -1,0 +1,43 @@
+/* Design tokens (colors, fonts) and base element styles. */
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --border: #27272a;
+  --text: #ededed;
+  --text-muted: #a1a1aa;
+  --accent: #34d399;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-foreground: var(--text);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-geist-sans);
+  --font-heading: var(--font-space-grotesk);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+  }
+}
