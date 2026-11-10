@@ -8,7 +8,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 // next/og cannot read CSS variables; these mirror :root in globals.css.
-const colors = { bg: "#0a0a0a", text: "#ededed", muted: "#a1a1aa", accent: "#c8f31d", glow: "#2a3214" };
+const colors = { bg: "#0a0a0a", text: "#f5f5f5", muted: "#a1a1aa", accent: "#c8f31d", glow: "#2a3214" };
 
 export default async function Image() {
   const [outfit, geist] = await Promise.all([

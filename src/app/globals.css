@@ -6,7 +6,7 @@
   --bg: #0a0a0a;
   --surface: #141414;
   --border: #27272a;
-  --text: #ededed;
+  --text: #f5f5f5;
   --text-muted: #a1a1aa;
   --accent: #c8f31d;
   --glow: #2a3214; /* olive wash in the top-left corner */
@@ -28,7 +28,8 @@
 @layer base {
   body {
     background:
-      radial-gradient(60rem 40rem at 0 0, var(--glow), transparent 70%) no-repeat,
+      radial-gradient(60rem 40rem at 0 0, var(--glow), transparent 70%)
+        no-repeat,
       var(--bg);
     color: var(--text);
   }

@@ -49,7 +49,7 @@ Personal portfolio for a full-stack developer. Goal: clear, fast, modern, and ea
 - Minimal, modern, confident. Generous spacing, strong type hierarchy, max content width.
 - Colors, fonts and spacing are CSS variables in globals.css. No hardcoded values in components.
   --bg #0a0a0a, --surface #141414, --border #27272a,
-  --text #ededed, --text-muted #a1a1aa, --accent #c8f31d, --glow #2a3214 (olive top-left radial wash)
+  --text #f5f5f5, --text-muted #a1a1aa, --accent #c8f31d, --glow #2a3214 (olive top-left radial wash)
 - Accent color only for primary button, links and small highlights.
 - Buttons are pills: filled accent with dark text (primary), outlined with an arrow (secondary).
 - Avoid purple/indigo gradients and generic template looks.

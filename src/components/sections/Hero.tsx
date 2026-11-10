@@ -39,16 +39,16 @@ export function Hero() {
 
         <p className="mt-8 max-w-[60ch] text-lg leading-relaxed text-muted sm:text-xl">{site.summary}</p>
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:flex sm:gap-4">
           <a
             href={site.primaryCta.href}
-            className="inline-flex h-14 items-center rounded-full bg-accent px-8 font-medium text-background hover:bg-foreground"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-accent px-4 font-medium whitespace-nowrap max-[359px]:px-3 max-[359px]:text-sm text-background hover:bg-foreground sm:px-8 pointer-fine:h-12"
           >
             {site.primaryCta.label}
           </a>
           <a
             href={site.contactCta.href}
-            className="inline-flex h-14 items-center gap-3 rounded-full border border-accent px-8 font-medium hover:bg-surface"
+            className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-accent px-4 font-medium whitespace-nowrap max-[359px]:px-3 max-[359px]:text-sm hover:bg-surface sm:gap-3 sm:px-8 pointer-fine:h-12"
           >
             {site.contactCta.label}
             <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.5">

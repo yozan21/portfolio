@@ -15,7 +15,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </header>
 
       <div className="lg:col-span-8">
-        <p className="max-w-[60ch] text-lg leading-relaxed">{project.summary}</p>
+        <p className="max-w-[60ch] text-lg leading-relaxed sm:text-xl">{project.summary}</p>
 
         <h4 className="mt-8 text-sm font-medium text-muted">{projectsSection.decisionsLabel}</h4>
         <ul className="mt-3 max-w-[60ch] list-disc space-y-2 pl-5 leading-relaxed text-muted marker:text-border">
