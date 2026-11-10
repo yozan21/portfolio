@@ -35,9 +35,10 @@ export const site = {
   name: "Yojan Kaphle",
   /** Hero paragraph under the name. */
   summary:
-    "I build fast, reliable web products, from React frontends to Node backends. I care about clean architecture and interfaces that feel quick, and I'm now exploring agentic AI workflows.",
+    "I build fast, reliable web products, from React frontends to Node backends. I care about clean architecture and interfaces that feel quick. I'm currently exploring agentic AI workflows and building one.",
   /** Short line for search results and the share image; not shown on the page. Keep under ~160 characters. */
-  description: "Full-stack developer building fast, reliable web products, from React frontends to Node backends.",
+  description:
+    "Full-stack developer building fast, reliable web products, from React frontends to Node backends.",
   /** Contact links: icon-only in the hero header and footer, text in the Contact section. Labels double as aria-labels. */
   contacts: [
     { label: "GitHub", href: "https://github.com/yozan21", icon: "github" },
@@ -46,15 +47,22 @@ export const site = {
       href: "https://www.linkedin.com/in/yojan-kaphle-7735a2387/",
       icon: "linkedin",
     },
-    { label: "Instagram", href: "https://www.instagram.com/yojan_kaphle/", icon: "instagram" },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/yojan_kaphle/",
+      icon: "instagram",
+    },
     { label: "Email", href: email, icon: "mail" },
   ] satisfies SocialLink[],
+  /** Centered scroll cue under the hero buttons, large screens with a mouse only: "before ── mouse ── after", linking to the projects. */
+  scrollCue: {
+    before: "Scroll down",
+    after: "to see projects",
+    href: "#projects",
+  },
   /** Primary hero button. */
-  /** Scroll cue under the hero buttons: text followed by a mouse icon, linking to the projects. */
-  scrollCue: { label: "Scroll down to see projects", href: "#projects" } satisfies Link,
-  /** Secondary hero button. */
   contactCta: { label: "Contact me", href: email } satisfies Link,
-  /** CV button; the PDF lives in public/ and opens in a new tab. */
+  /** Secondary hero button. The CV PDF lives in public/ and opens in a new tab. */
   cvCta: { label: "View CV", href: "/Yojan_Kaphle_Resume.pdf" } satisfies Link,
   /** Heading text for each section, rendered by SectionHeading. */
   sections: {
@@ -73,7 +81,8 @@ export const site = {
     contact: {
       label: "Contact",
       title: "Get in touch",
-      summary: "Open to full-stack roles and freelance work. Email is the quickest way to reach me.",
+      summary:
+        "Open to full-stack roles and freelance work. Email is the quickest way to reach me.",
     },
   },
   /** Read by screen readers after any link that opens in a new tab. */

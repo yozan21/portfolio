@@ -54,8 +54,9 @@ Personal portfolio for a full-stack developer. Goal: clear, fast, modern, and ea
   --bg #0a0a0a, --surface #141414, --border #27272a,
   --text #f5f5f5, --text-muted #a1a1aa, --accent #c8f31d, --glow #2a3214 (olive top-left radial wash)
 - Accent color only for primary button, links and small highlights.
-- Buttons are pills: filled accent with dark text (primary), outlined with an arrow (secondary). Height follows the input device, not the screen: 56px by default for touch, `pointer-fine:h-12` (48px) for mouse and trackpad. On phones the hero buttons sit side by side in a two-column grid.
+- Buttons are pills: filled accent with dark text (primary), outlined with an arrow (secondary). Hero buttons: 48px tall with 14px text on phones, side by side in a two-column grid; `sm:pointer-coarse:h-14` (56px) for touch tablets; 48px with a mouse or trackpad.
 - The hero name is the largest text on the page: 48px, `lg` 60px, `xl` 80px. Section titles stay below it (36px, `lg` 48px).
+- The hero scroll cue ("Scroll down ── mouse ── for projects", centered) shows only on large screens with a mouse (`hidden lg:pointer-fine:flex`), and must stay visible on a 1280×720 laptop.
 - The hero is not full-screen: it flows from the nav with a fixed gap. Pinning content to the bottom of the screen pushed the buttons off laptop screens and left a large gap on tall ones.
 - Avoid purple/indigo gradients and generic template looks.
 
