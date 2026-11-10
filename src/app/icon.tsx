@@ -7,10 +7,10 @@ export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
 // next/og cannot read CSS variables; these mirror :root in globals.css.
-const colors = { bg: "#0a0a0a", accent: "#34d399" };
+const colors = { bg: "#0a0a0a", accent: "#c8f31d" };
 
 export default async function Icon() {
-  const spaceGrotesk = await loadFont("SpaceGrotesk-SemiBold.ttf");
+  const outfit = await loadFont("Outfit-SemiBold.ttf");
   const initials = site.name
     .split(" ")
     .map((word) => word[0])
@@ -25,10 +25,10 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          borderRadius: 14,
+          borderRadius: 32,
           background: colors.accent,
           color: colors.bg,
-          fontFamily: "Space Grotesk",
+          fontFamily: "Outfit",
           fontSize: 34,
           letterSpacing: "-0.04em",
         }}
@@ -36,6 +36,6 @@ export default async function Icon() {
         {initials}
       </div>
     ),
-    { ...size, fonts: [{ name: "Space Grotesk", data: spaceGrotesk, weight: 600, style: "normal" }] },
+    { ...size, fonts: [{ name: "Outfit", data: outfit, weight: 600, style: "normal" }] },
   );
 }

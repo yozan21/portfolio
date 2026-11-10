@@ -8,11 +8,11 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 // next/og cannot read CSS variables; these mirror :root in globals.css.
-const colors = { bg: "#0a0a0a", text: "#ededed", muted: "#a1a1aa", accent: "#34d399" };
+const colors = { bg: "#0a0a0a", text: "#ededed", muted: "#a1a1aa", accent: "#c8f31d", glow: "#2a3214" };
 
 export default async function Image() {
-  const [spaceGrotesk, geist] = await Promise.all([
-    loadFont("SpaceGrotesk-SemiBold.ttf"),
+  const [outfit, geist] = await Promise.all([
+    loadFont("Outfit-Light.ttf"),
     loadFont("Geist-Regular.ttf"),
   ]);
 
@@ -27,16 +27,17 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: 72,
           background: colors.bg,
+          backgroundImage: `radial-gradient(800px 520px at 0 0, ${colors.glow}, transparent 70%)`,
           color: colors.text,
           fontFamily: "Geist",
         }}
       >
-        <div style={{ width: 24, height: 24, borderRadius: 4, background: colors.accent }} />
+        <div style={{ width: 24, height: 24, borderRadius: 12, background: colors.accent }} />
         <div style={{ display: "flex", flexDirection: "column" }}>
           {site.name.split(" ").map((word) => (
             <div
               key={word}
-              style={{ fontFamily: "Space Grotesk", fontSize: 150, lineHeight: 0.88, letterSpacing: "-0.045em" }}
+              style={{ fontFamily: "Outfit", fontWeight: 300, fontSize: 150, lineHeight: 0.92, letterSpacing: "-0.03em" }}
             >
               {word}
             </div>
@@ -50,7 +51,7 @@ export default async function Image() {
     {
       ...size,
       fonts: [
-        { name: "Space Grotesk", data: spaceGrotesk, weight: 600, style: "normal" },
+        { name: "Outfit", data: outfit, weight: 300, style: "normal" },
         { name: "Geist", data: geist, weight: 400, style: "normal" },
       ],
     },

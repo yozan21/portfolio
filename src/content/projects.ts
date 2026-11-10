@@ -18,9 +18,8 @@ export type Project = {
   repoUrl?: string;
 };
 
-/** Section heading and the labels shared by every project card. */
+/** Labels shared by every project card. The section heading lives in site.sections. */
 export const projectsSection = {
-  heading: "Projects",
   decisionsLabel: "Decisions",
   stackLabel: "Stack",
   liveLabel: "Live site",
@@ -97,5 +96,7 @@ export const projects: Project[] = [
       "Let staff create guest accounts for offline bookings, so walk-in and phone bookings live in the same system as online ones.",
     ],
     stack: ["React", "TanStack Query", "Supabase"],
+    repoUrl: "https://github.com/yozan21/the-wild-oasis",
+    liveUrl: "https://the-wild-oasis-yozan.vercel.app/",
   },
 ];

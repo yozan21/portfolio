@@ -1,4 +1,4 @@
-/** Skills section copy and skill groups. Groups are placeholders until trimmed to what you actually use. */
+/** Skill groups for the Skills section. The section heading lives in site.sections. */
 
 /** A named group of related skills. */
 export type SkillGroup = {
@@ -6,11 +6,6 @@ export type SkillGroup = {
   name: string;
   /** Skills in this group, most used first. */
   items: string[];
-};
-
-/** Section heading. */
-export const skillsSection = {
-  heading: "Skills",
 };
 
 export const skillGroups: SkillGroup[] = [
@@ -23,6 +18,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       "React",
       "TanStack Query",
+      "RTK",
       "Next.js",
       "Tailwind CSS",
       "HTML",

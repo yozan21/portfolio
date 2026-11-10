@@ -8,7 +8,8 @@
   --border: #27272a;
   --text: #ededed;
   --text-muted: #a1a1aa;
-  --accent: #34d399;
+  --accent: #c8f31d;
+  --glow: #2a3214; /* olive wash in the top-left corner */
 }
 
 @theme inline {
@@ -20,13 +21,15 @@
   --color-accent: var(--accent);
 
   --font-sans: var(--font-geist-sans);
-  --font-heading: var(--font-space-grotesk);
+  --font-heading: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
 }
 
 @layer base {
   body {
-    background: var(--bg);
+    background:
+      radial-gradient(60rem 40rem at 0 0, var(--glow), transparent 70%) no-repeat,
+      var(--bg);
     color: var(--text);
   }
 
@@ -34,6 +37,11 @@
   h2,
   h3 {
     font-family: var(--font-heading);
+  }
+
+  h1,
+  h2 {
+    font-weight: 300;
   }
 
   :focus-visible {

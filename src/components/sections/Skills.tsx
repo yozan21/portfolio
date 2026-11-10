@@ -1,5 +1,7 @@
 // Skills section: skill groups as a definition list of plain text.
-import { skillGroups, skillsSection } from "@/content/skills";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { site } from "@/content/site";
+import { skillGroups } from "@/content/skills";
 
 export function Skills() {
   return (
@@ -8,9 +10,7 @@ export function Skills() {
       aria-labelledby="skills-title"
       className="mx-auto w-full max-w-6xl px-6 py-24 sm:px-10 sm:py-32"
     >
-      <h2 id="skills-title" className="text-4xl font-semibold tracking-tight sm:text-6xl">
-        {skillsSection.heading}
-      </h2>
+      <SectionHeading id="skills-title" {...site.sections.skills} />
       <dl className="mt-12 sm:mt-16">
         {skillGroups.map((group) => (
           <div
