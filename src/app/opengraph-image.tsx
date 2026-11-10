@@ -1,9 +1,9 @@
-// Share preview image (LinkedIn, Slack, iMessage, X): name and tagline in the hero's layout, rendered at build time.
+// Share preview image (LinkedIn, Slack, iMessage, X): name and description in the hero's layout, rendered at build time.
 import { ImageResponse } from "next/og";
 import { site } from "@/content/site";
 import { loadFont } from "@/lib/loadFont";
 
-export const alt = `${site.name}. ${site.tagline}`;
+export const alt = `${site.name}. ${site.description}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +43,7 @@ export default async function Image() {
             </div>
           ))}
           <div style={{ marginTop: 40, fontSize: 34, lineHeight: 1.4, color: colors.muted, maxWidth: 820 }}>
-            {site.tagline}
+            {site.description}
           </div>
         </div>
       </div>

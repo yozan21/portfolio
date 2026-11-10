@@ -16,7 +16,7 @@ export function SectionHeading({ id, label, title, summary }: SectionHeadingProp
         {label}
         {"/>"}
       </p>
-      <h2 id={id} className="mt-4 text-4xl leading-[1.1] font-medium tracking-tight sm:text-5xl">
+      <h2 id={id} className="mt-4 text-4xl leading-[1.1] font-medium tracking-tight lg:text-5xl">
         {title}
       </h2>
       <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-muted sm:text-xl">{summary}</p>

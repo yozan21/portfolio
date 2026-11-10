@@ -24,18 +24,18 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: site.name,
-  description: site.tagline,
+  description: site.description,
   openGraph: {
     type: "website",
     url: "/",
     siteName: site.name,
     title: site.name,
-    description: site.tagline,
+    description: site.description,
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
-    description: site.tagline,
+    description: site.description,
   },
 };
 

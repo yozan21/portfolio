@@ -22,16 +22,16 @@ export const site = {
   /** Hero pill above the eyebrow; shown with an accent dot. */
   availability: "Open to full-stack roles",
   /** Hero eyebrow above the greeting. */
-  eyebrow: "<>Full-Stack Developer</>",
+  eyebrow: "<Full-Stack Developer/>",
   /** Hero line directly above the name. */
   greeting: "Hi, I'm",
   /** Full name, shown as the hero heading and the page title. */
   name: "Yojan Kaphle",
-  /** One-line pitch under the name; also the meta description and share-image text. */
-  tagline: "I build fast, reliable web products, from React frontends to Node backends.",
-  /** Longer hero paragraph under the tagline. */
+  /** Hero paragraph under the name. */
   summary:
-    "Full-stack developer building web apps with modern tools, now exploring agentic AI workflows. I care about clean architecture and interfaces that feel quick.",
+    "I build fast, reliable web products, from React frontends to Node backends. I care about clean architecture and interfaces that feel quick, and I'm now exploring agentic AI workflows.",
+  /** Short line for search results and the share image; not shown on the page. Keep under ~160 characters. */
+  description: "Full-stack developer building fast, reliable web products, from React frontends to Node backends.",
   /** Contact links shown in the hero nav. */
   contacts: [
     { label: "GitHub", href: "https://github.com/yozan21" },
