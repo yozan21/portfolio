@@ -1,5 +1,7 @@
 // One project row: title and role, then summary, decisions, stack tags and links.
+import { ExternalLinkIcon } from "@/components/ui/icons";
 import { projectsSection, type Project } from "@/content/projects";
+import { externalLinkProps } from "@/lib/externalLink";
 
 export function ProjectCard({ project }: { project: Project }) {
   const links = [
@@ -40,10 +42,12 @@ export function ProjectCard({ project }: { project: Project }) {
               <li key={label}>
                 <a
                   href={href}
-                  className="underline decoration-border underline-offset-4 hover:text-accent"
+                  {...externalLinkProps(href ?? "")}
+                  className="inline-flex items-center gap-1.5 underline decoration-border underline-offset-4 hover:text-accent"
                 >
                   {label}
                   <span className="sr-only"> {project.title}</span>
+                  <ExternalLinkIcon size={16} />
                 </a>
               </li>
             ))}

@@ -1,7 +1,8 @@
-// Root layout: fonts, metadata and the <html>/<body>/<main> shell with the site footer.
+// Root layout: fonts, metadata, the <html>/<body>/<main> shell with the site footer, and the hidden new-tab note.
 import type { Metadata } from "next";
 import { Footer } from "@/components/sections/Footer";
 import { site } from "@/content/site";
+import { NEW_TAB_NOTE_ID } from "@/lib/externalLink";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 
@@ -48,6 +49,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <main>{children}</main>
         <Footer />
+        <span id={NEW_TAB_NOTE_ID} hidden>
+          {site.newTabNote}
+        </span>
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 // Contact section: short invitation, the email address as the main link, then other profiles.
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/content/site";
+import { externalLinkProps } from "@/lib/externalLink";
 
 export function Contact() {
   const email = site.contacts.find((c) => c.href.startsWith("mailto:"));
@@ -26,7 +27,7 @@ export function Contact() {
       <ul className="mt-8 flex gap-6">
         {profiles.map(({ label, href }) => (
           <li key={label}>
-            <a href={href} className="underline decoration-border underline-offset-4 hover:text-accent">
+            <a href={href} {...externalLinkProps(href)} className="underline decoration-border underline-offset-4 hover:text-accent">
               {label}
             </a>
           </li>

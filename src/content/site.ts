@@ -1,6 +1,12 @@
 /** Site-wide text and links: identity, hero copy, contact links and calls to action. */
 
 /** A labelled link. */
+/** A contact link with the brand icon that represents it. */
+export type SocialLink = Link & {
+  /** Key into socialIcons in components/ui/icons.tsx. */
+  icon: "github" | "linkedin" | "instagram" | "mail";
+};
+
 export type Link = {
   /** Visible link text. */
   label: string;
@@ -32,19 +38,24 @@ export const site = {
     "I build fast, reliable web products, from React frontends to Node backends. I care about clean architecture and interfaces that feel quick, and I'm now exploring agentic AI workflows.",
   /** Short line for search results and the share image; not shown on the page. Keep under ~160 characters. */
   description: "Full-stack developer building fast, reliable web products, from React frontends to Node backends.",
-  /** Contact links shown in the hero nav. */
+  /** Contact links: icon-only in the hero header and footer, text in the Contact section. Labels double as aria-labels. */
   contacts: [
-    { label: "GitHub", href: "https://github.com/yozan21" },
+    { label: "GitHub", href: "https://github.com/yozan21", icon: "github" },
     {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/yojan-kaphle-7735a2387/",
+      icon: "linkedin",
     },
-    { label: "Email", href: email },
-  ] satisfies Link[],
+    { label: "Instagram", href: "https://www.instagram.com/yojan_kaphle/", icon: "instagram" },
+    { label: "Email", href: email, icon: "mail" },
+  ] satisfies SocialLink[],
   /** Primary hero button. */
-  primaryCta: { label: "View projects", href: "#projects" } satisfies Link,
+  /** Scroll cue under the hero buttons: text followed by a mouse icon, linking to the projects. */
+  scrollCue: { label: "Scroll down to see projects", href: "#projects" } satisfies Link,
   /** Secondary hero button. */
   contactCta: { label: "Contact me", href: email } satisfies Link,
+  /** CV button; the PDF lives in public/ and opens in a new tab. */
+  cvCta: { label: "View CV", href: "/Yojan_Kaphle_Resume.pdf" } satisfies Link,
   /** Heading text for each section, rendered by SectionHeading. */
   sections: {
     projects: {
@@ -65,6 +76,8 @@ export const site = {
       summary: "Open to full-stack roles and freelance work. Email is the quickest way to reach me.",
     },
   },
+  /** Read by screen readers after any link that opens in a new tab. */
+  newTabNote: "(opens in a new tab)",
   /** Footer line, shown after the copyright year. */
   footer: "Yojan Kaphle",
 };

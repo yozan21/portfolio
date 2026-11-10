@@ -1,22 +1,17 @@
-// Hero section: contact links, then availability pill, eyebrow, greeting, name, summary and CTAs.
+// Hero section: icon contact links, then availability pill, eyebrow, greeting, name, summary, CTAs (contact, CV) and a scroll cue to the projects.
+import { ArrowRightIcon, ExternalLinkIcon, MouseIcon } from "@/components/ui/icons";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { site } from "@/content/site";
+import { externalLinkProps } from "@/lib/externalLink";
 
 export function Hero() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pt-8 pb-8 sm:px-10 sm:pt-12 lg:gap-16"
+      className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pt-8 pb-8 sm:px-10"
     >
-      <nav aria-label="Contact" className="self-end">
-        <ul className="flex gap-6 text-sm text-muted">
-          {site.contacts.map(({ label, href }) => (
-            <li key={label}>
-              <a href={href} className="hover:text-accent">
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+      <nav aria-label="Contact" className="-mr-2 self-end">
+        <SocialLinks />
       </nav>
 
       <div>
@@ -41,21 +36,29 @@ export function Hero() {
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:flex sm:gap-4">
           <a
-            href={site.primaryCta.href}
-            className="inline-flex h-14 items-center justify-center rounded-full bg-accent px-4 font-medium whitespace-nowrap max-[359px]:px-3 max-[359px]:text-sm text-background hover:bg-foreground sm:px-8 pointer-fine:h-12"
-          >
-            {site.primaryCta.label}
-          </a>
-          <a
             href={site.contactCta.href}
-            className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-accent px-4 font-medium whitespace-nowrap max-[359px]:px-3 max-[359px]:text-sm hover:bg-surface sm:gap-3 sm:px-8 pointer-fine:h-12"
+            className="inline-flex h-14 items-center justify-center gap-2 rounded-full bg-accent px-4 font-medium whitespace-nowrap max-[359px]:px-3 max-[359px]:text-sm text-background hover:bg-foreground sm:gap-3 sm:px-8 pointer-fine:h-12"
           >
             {site.contactCta.label}
-            <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+            <ArrowRightIcon size={18} className="shrink-0 max-[359px]:hidden" />
+          </a>
+          <a
+            href={site.cvCta.href}
+            {...externalLinkProps(site.cvCta.href)}
+            className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-accent px-4 font-medium whitespace-nowrap max-[359px]:px-3 max-[359px]:text-sm hover:bg-surface sm:gap-3 sm:px-8 pointer-fine:h-12"
+          >
+            {site.cvCta.label}
+            <ExternalLinkIcon size={18} className="shrink-0 max-[359px]:hidden" />
           </a>
         </div>
+
+        <a
+          href={site.scrollCue.href}
+          className="mt-8 inline-flex items-center gap-3 py-2 text-sm text-muted hover:text-accent"
+        >
+          {site.scrollCue.label}
+          <MouseIcon size={24} />
+        </a>
       </div>
     </section>
   );
